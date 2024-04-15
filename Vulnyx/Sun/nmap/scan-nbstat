@@ -1,0 +1,21 @@
+# Nmap 7.94SVN scan initiated Wed Apr  3 15:58:20 2024 as: nmap --script nbstat -oN nmap/scan-nbstat 192.168.1.13
+Nmap scan report for sun.home (192.168.1.13)
+Host is up (0.0011s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+8080/tcp open  http-proxy
+
+Host script results:
+| nbstat: NetBIOS name: SUN, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   SUN<00>              Flags: <unique><active>
+|   SUN<03>              Flags: <unique><active>
+|   SUN<20>              Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+
+# Nmap done at Wed Apr  3 15:58:26 2024 -- 1 IP address (1 host up) scanned in 5.59 seconds

