@@ -180,7 +180,8 @@ do
 	INTENTO=$((INTENTO+1))
 done
 ```
-El script nos devuelve una contraseña: "sunday". En este caso hemos creado un script muy sencillo de bash que nos ha funcionado en poco tiempo, en caso de que esto se fuese de tiempo, tendríamos que agilizar la ejecución utilizando varios hilos o procesos.  
+El script nos devuelve una contraseña: "sunday".![image](https://github.com/AlexGis99/Writeups/assets/82893511/303dc0d8-42d1-405f-b2f2-3c11175131e4)  
+En este caso hemos creado un script muy sencillo de bash que nos ha funcionado en poco tiempo, en caso de que esto se fuese de tiempo, tendríamos que agilizar la ejecución utilizando varios hilos o procesos.  
 Ya que tenemos la contraseña, podemos entrar en la máquina con SMB o para hacerlo más sencillo y cómodo, podemos montarnos una partición con el share del usuario:
 ```console
 $ mkdir /mnt/Sun
