@@ -157,7 +157,8 @@ S-1-5-21-3376172362-2708036654-1072164461-1000 SUN\punt4n0 (Local User)
 
 [+] Enumerating users using SID S-1-5-32 and logon username '', password ''
 ```
-[enum4linux enum users](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/enum4linux_enum)
+[enum4linux enum users](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/enum4linux_enum)  
+Podemos enumerar la página web e intentar analizarla viendo el código html de la página, pero no nos dará muchas pistas y es malgastar tiempo.
 ### Weaponization ###
 Observamos un usuario llamado "punt4n0", sabiendo esto y que la política de complejidad de contraseña es muy débil podemos intentar un ataque de diccionario por SMB. Al no haber podido realizar esto con Hydra (debido a que no soporta SMBv1), nos creamos un pequeño script en bash para realizar este ataque: [Script bash dictionary attack](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/scripts/dictionaryAtt_smb.sh)
 El script nos devuelve una contraseña: "sunday". En este caso hemos creado un script muy sencillo de bash que nos ha funcionado en poco tiempo, en caso de que esto se fuese de tiempo, tendríamos que agilizar la ejecución utilizando varios hilos o procesos.  
