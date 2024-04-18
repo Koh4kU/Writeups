@@ -1,0 +1,12 @@
+# Nmap 7.94SVN scan initiated Thu Apr 18 13:32:59 2024 as: nmap -sVC -p80 -oN nmap/scan-services 10.0.2.6
+Nmap scan report for 10.0.2.6
+Host is up (0.00069s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.57 ((Debian))
+|_http-title: HackingStation
+|_http-server-header: Apache/2.4.57 (Debian)
+MAC Address: 08:00:27:E1:40:2F (Oracle VirtualBox virtual NIC)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 18 13:33:06 2024 -- 1 IP address (1 host up) scanned in 6.94 seconds

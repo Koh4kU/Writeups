@@ -1,0 +1,29 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: enumeration/dirbuster_80
+START_TIME: Thu Apr 18 13:41:23 2024
+URL_BASE: http://10.0.2.6:80/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.0.2.6:80/ ----
++ http://10.0.2.6:80/index.html (CODE:200|SIZE:684)
+==> DIRECTORY: http://10.0.2.6:80/javascript/
++ http://10.0.2.6:80/server-status (CODE:403|SIZE:273)
+
+---- Entering directory: http://10.0.2.6:80/javascript/ ----
+==> DIRECTORY: http://10.0.2.6:80/javascript/jquery/
+
+---- Entering directory: http://10.0.2.6:80/javascript/jquery/ ----
++ http://10.0.2.6:80/javascript/jquery/jquery (CODE:200|SIZE:289782)
+
+-----------------
+END_TIME: Thu Apr 18 13:41:37 2024
+DOWNLOADED: 13836 - FOUND: 3

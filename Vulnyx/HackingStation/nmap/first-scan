@@ -1,0 +1,10 @@
+# Nmap 7.94SVN scan initiated Thu Apr 18 13:31:29 2024 as: nmap -p- --open --min-rate 5000 -n -Pn -oN nmap/first-scan 10.0.2.6
+Nmap scan report for 10.0.2.6
+Host is up (0.00059s latency).
+Not shown: 44294 closed tcp ports (reset), 21240 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 08:00:27:E1:40:2F (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Thu Apr 18 13:31:48 2024 -- 1 IP address (1 host up) scanned in 18.70 seconds
