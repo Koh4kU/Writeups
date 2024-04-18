@@ -1,4 +1,8 @@
-Machine:
+# ToDo #
+
+
+
+~~Machine:
 	HackingStation:
 	netdiscover -r 10.0.2.0/24
 	nmap first
@@ -44,4 +48,4 @@ Machine:
 					sudo nmap --script=$BASH
 				Tenemos acceso como root. Aunque no aparezca cuando escribimos, el comando se ejecuta. Para hacerlo más comodo podemos enviarnos
 				una reverse shell como root, o activar ssh y establecer por ahí una conexión (vemos como de verdad tiene ssh abierto pero solo en modo
-				escucha). De todas formas en el home de root, tenemos su flag
+				escucha). De todas formas en el home de root, tenemos su flag~~
