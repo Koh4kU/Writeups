@@ -1,8 +1,5 @@
-# ToDo #
 
-
-
-~~Machine:
+<!-- ~~Machine:
 	HackingStation:
 	netdiscover -r 10.0.2.0/24
 	nmap first
