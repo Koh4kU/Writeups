@@ -1,5 +1,5 @@
 # WRITEUP - HACKINGSTATTION - VULNYX #
-![image](https://github.com/AlexGis99/Writeups/assets/82893511/34eb39b4-93b9-49b7-b8e5-30dc668567f9)
+![image](https://github.com/Koh4kU/Writeups/assets/82893511/34eb39b4-93b9-49b7-b8e5-30dc668567f9)
 ### Recon/Scanning network: ###
 Empezamos identificando el activo víctima a explotar dentro de nuestra red con un reconocimiento completo de ella:
 ```shell
@@ -7,7 +7,7 @@ $ netdiscover -r 10.0.2.0/24
 ```
 ~~Meter imagen del resultado~~  
 Identificamos la ip de nuestra víctima, ahora podemos empezar a escanear el activo para identificar posibles vectores de entrada.  
-Ejecutamos un escaneo con nmap en el que escaneamos todos los 65535 puertos (-p-), que nos identifique todos aquellos puertos abiertos (--open), con un ratio mínimo de 5000 paquetes por segundo (--min-rate 5000), sin resolución DNS (-n) y sin host discovery (-Pn). [First scan](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/HackingStation/nmap/first-scan).
+Ejecutamos un escaneo con nmap en el que escaneamos todos los 65535 puertos (-p-), que nos identifique todos aquellos puertos abiertos (--open), con un ratio mínimo de 5000 paquetes por segundo (--min-rate 5000), sin resolución DNS (-n) y sin host discovery (-Pn). [First scan](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/HackingStation/nmap/first-scan).
 ```console
 $ nmap -p- --open --min-rate 5000 -n -Pn 10.0.2.6
 ```
@@ -22,7 +22,7 @@ MAC Address: 08:00:27:E1:40:2F (Oracle VirtualBox virtual NIC)
 
 # Nmap done at Thu Apr 18 13:31:48 2024 -- 1 IP address (1 host up) scanned in 18.70 seconds
 ```
-Observamos que solo existe un puerto abierto con el escaneo realizado, por lo que vamos a ejecutar un escaneo sobre servicios y con unos scripts por defecto para el análisis. [Scan services](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/HackingStation/nmap/scan-services).
+Observamos que solo existe un puerto abierto con el escaneo realizado, por lo que vamos a ejecutar un escaneo sobre servicios y con unos scripts por defecto para el análisis. [Scan services](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/HackingStation/nmap/scan-services).
 ```shell
 $ nmap -p80 -sVC 10.0.2.6 
 ```
@@ -41,7 +41,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 ```
 ### Enumeration ###
 Como podemos comprobar, tiene un servicio HTTP con un apache 2.4.57, el cuál si buscamos un poco de información, podemos ver que está relacionado con el CVE-2023-31122, el cuál nos permite ejecutar un RCE (Remote Command Execution), no indagaremos más por ahora sobre está vulnerabilidad pero está bien tenerla en mente.  
-Teniendo este servicio web, podemos dejar un dirbuster ejecutando mientras nosotros analizamos de forma manual el servicio web. [Dirbuster](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/HackingStation/enumeration/dirbuster_80).
+Teniendo este servicio web, podemos dejar un dirbuster ejecutando mientras nosotros analizamos de forma manual el servicio web. [Dirbuster](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/HackingStation/enumeration/dirbuster_80).
 ```shell
 $ dirb http://10.0.2.6:80
 ```
