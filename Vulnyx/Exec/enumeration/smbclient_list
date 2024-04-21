@@ -1,0 +1,10 @@
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	server          Disk      Developer Directory
+	IPC$            IPC       IPC Service (Samba 4.17.12-Debian)
+	nobody          Disk      Home Directories
+Reconnecting with SMB1 for workgroup listing.
+Protocol negotiation to server 10.0.2.7 (for a protocol between LANMAN1 and NT1) failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+Unable to connect with SMB1 -- no workgroup available
