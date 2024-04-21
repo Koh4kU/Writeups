@@ -1,6 +1,6 @@
-<--
-### WRITEUP - VULNYX - EXEC ##
 
+### WRITEUP - VULNYX - EXEC ##
+<!--
 ## Scanning Network ##
 netdiscover -r 10.0.2.0/24
 
