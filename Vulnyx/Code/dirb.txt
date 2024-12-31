@@ -1,0 +1,81 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb.txt
+START_TIME: Sun Dec 29 11:32:20 2024
+URL_BASE: http://192.168.1.56/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://192.168.1.56/ ----
+==> DIRECTORY: http://192.168.1.56/pluck/
++ http://192.168.1.56/server-status (CODE:403|SIZE:277)
+
+---- Entering directory: http://192.168.1.56/pluck/ ----
+==> DIRECTORY: http://192.168.1.56/pluck/data/
+==> DIRECTORY: http://192.168.1.56/pluck/docs/
+==> DIRECTORY: http://192.168.1.56/pluck/files/
+==> DIRECTORY: http://192.168.1.56/pluck/images/
++ http://192.168.1.56/pluck/robots.txt (CODE:200|SIZE:47)
+
+---- Entering directory: http://192.168.1.56/pluck/data/ ----
+==> DIRECTORY: http://192.168.1.56/pluck/data/image/
+==> DIRECTORY: http://192.168.1.56/pluck/data/inc/
+==> DIRECTORY: http://192.168.1.56/pluck/data/modules/
+==> DIRECTORY: http://192.168.1.56/pluck/data/settings/
+==> DIRECTORY: http://192.168.1.56/pluck/data/themes/
+==> DIRECTORY: http://192.168.1.56/pluck/data/trash/
+
+---- Entering directory: http://192.168.1.56/pluck/docs/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/files/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/images/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/image/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/inc/ ----
+==> DIRECTORY: http://192.168.1.56/pluck/data/inc/lang/
+==> DIRECTORY: http://192.168.1.56/pluck/data/inc/lib/
+
+---- Entering directory: http://192.168.1.56/pluck/data/modules/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/settings/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/themes/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/trash/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/inc/lang/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.1.56/pluck/data/inc/lib/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Sun Dec 29 11:33:24 2024
+DOWNLOADED: 81832 - FOUND: 2

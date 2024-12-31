@@ -1,0 +1,2 @@
+/speed               [36m (Status: 301)[0m [Size: 160][34m [--> http://192.168.1.22/speed/][0m
+/Speed               [36m (Status: 301)[0m [Size: 160][34m [--> http://192.168.1.22/Speed/][0m

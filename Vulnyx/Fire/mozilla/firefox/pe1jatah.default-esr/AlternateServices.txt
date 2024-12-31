@@ -1,0 +1,2 @@
+https:archive.mozilla.org:443:.::3	0	19629	https:archive.mozilla.org:443:archive.mozilla.org:443::n:1696012751:h3:n:1696012239:n::|n:y:
+https:safebrowsing.googleapis.com:443:.:^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:3	0	19629	https:safebrowsing.googleapis.com:443:safebrowsing.googleapis.com:443::n:1698604253:h3:y:1696012239:n:^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:|n:y:

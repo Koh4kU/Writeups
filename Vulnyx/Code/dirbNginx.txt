@@ -1,0 +1,137 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbNginx.txt
+START_TIME: Sun Dec 29 16:20:21 2024
+URL_BASE: http://192.168.1.56:1234/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://192.168.1.56:1234/ ----
++ http://192.168.1.56:1234/.bashrc (CODE:200|SIZE:3526)
++ http://192.168.1.56:1234/.profile (CODE:200|SIZE:161)
+==> DIRECTORY: http://192.168.1.56:1234/.ssh/
++ http://192.168.1.56:1234/admin.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/index.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/info.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/phpinfo.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/xmlrpc.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/xmlrpc_server.php (CODE:502|SIZE:559)
+
+---- Entering directory: http://192.168.1.56:1234/.ssh/ ----
++ http://192.168.1.56:1234/.ssh/admin.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/.ssh/authorized_keys (CODE:200|SIZE:381)
++ http://192.168.1.56:1234/.ssh/id_rsa (CODE:200|SIZE:1743)
++ http://192.168.1.56:1234/.ssh/index.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/.ssh/info.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/.ssh/phpinfo.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/.ssh/xmlrpc.php (CODE:502|SIZE:559)
++ http://192.168.1.56:1234/.ssh/xmlrpc_server.php (CODE:502|SIZE:559)
+
+-----------------
+END_TIME: Sun Dec 29 16:20:28 2024
+DOWNLOADED: 9224 - FOUND: 16
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbNginx.txt
+START_TIME: Sun Dec 29 16:51:57 2024
+URL_BASE: http://192.168.1.56:1234/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://192.168.1.56:1234/ ----
++ http://192.168.1.56:1234/.bashrc (CODE:200|SIZE:3526)
++ http://192.168.1.56:1234/.profile (CODE:200|SIZE:161)
+==> DIRECTORY: http://192.168.1.56:1234/.ssh/
+
+---- Entering directory: http://192.168.1.56:1234/.ssh/ ----
++ http://192.168.1.56:1234/.ssh/authorized_keys (CODE:200|SIZE:381)
++ http://192.168.1.56:1234/.ssh/id_rsa (CODE:200|SIZE:1743)
+
+-----------------
+END_TIME: Sun Dec 29 16:52:04 2024
+DOWNLOADED: 9224 - FOUND: 4
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbNginx.txt
+START_TIME: Sun Dec 29 17:39:04 2024
+URL_BASE: http://192.168.1.56:1234/
+WORDLIST_FILES: /usr/share/SecLists/Discovery/File-System/OBEX_common.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 40
+
+---- Scanning URL: http://192.168.1.56:1234/ ----
+
+-----------------
+END_TIME: Sun Dec 29 17:39:04 2024
+DOWNLOADED: 40 - FOUND: 0
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbNginx.txt
+START_TIME: Sun Dec 29 17:39:14 2024
+URL_BASE: http://192.168.1.56:1234/
+WORDLIST_FILES: /usr/share/SecLists/Discovery/File-System/OBEX_rare.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 16
+
+---- Scanning URL: http://192.168.1.56:1234/ ----
+
+-----------------
+END_TIME: Sun Dec 29 17:39:14 2024
+DOWNLOADED: 16 - FOUND: 0
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbNginx.txt
+START_TIME: Sun Dec 29 17:40:17 2024
+URL_BASE: http://192.168.1.56:1234/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://192.168.1.56:1234/ ----
++ http://192.168.1.56:1234/.bashrc (CODE:200|SIZE:3526)
++ http://192.168.1.56:1234/.profile (CODE:200|SIZE:161)
+==> DIRECTORY: http://192.168.1.56:1234/.ssh/
+
+---- Entering directory: http://192.168.1.56:1234/.ssh/ ----
++ http://192.168.1.56:1234/.ssh/authorized_keys (CODE:200|SIZE:381)
+
+-----------------
+END_TIME: Sun Dec 29 17:40:48 2024
+DOWNLOADED: 40916 - FOUND: 3

@@ -1,0 +1,113 @@
+# Nmap 7.94SVN scan initiated Fri Dec 27 15:30:12 2024 as: /usr/lib/nmap/nmap --privileged -p 21,22,80,9090 -sVC -oN secondNmap.txt 192.168.1.105
+Nmap scan report for 192.168.1.105
+Host is up (0.00057s latency).
+
+PORT     STATE SERVICE         VERSION
+21/tcp   open  ftp             pyftpdlib 1.5.7
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--   1 root     root      4442576 Sep 29  2023 backup.zip
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|  Connected to: 192.168.1.105:21
+|  Waiting for username.
+|  TYPE: ASCII; STRUcture: File; MODE: Stream
+|  Data connection closed.
+|_End of status.
+22/tcp   open  ssh             OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 f0:e6:24:fb:9e:b0:7a:1a:bd:f7:b1:85:23:7f:b1:6f (RSA)
+|   256 99:c8:74:31:45:10:58:b0:ce:cc:63:b4:7a:82:57:3d (ECDSA)
+|_  256 60:da:3e:31:38:fa:b5:49:ab:48:c3:43:2c:9f:d1:32 (ED25519)
+80/tcp   open  http            Apache httpd 2.4.56 ((Debian))
+|_http-server-header: Apache/2.4.56 (Debian)
+|_http-title: Apache2 Debian Default Page: It works
+9090/tcp open  ssl/zeus-admin?
+| ssl-cert: Subject: commonName=fire/organizationName=b8029c6b7a9c4c7d93fed3a3c6ab94bc
+| Subject Alternative Name: IP Address:127.0.0.1, DNS:localhost
+| Not valid before: 2024-12-27T10:32:25
+|_Not valid after:  2025-12-27T10:32:25
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad request
+|     Content-Type: text/html; charset=utf8
+|     Transfer-Encoding: chunked
+|     X-DNS-Prefetch-Control: off
+|     Referrer-Policy: no-referrer
+|     X-Content-Type-Options: nosniff
+|     Cross-Origin-Resource-Policy: same-origin
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>
+|     request
+|     </title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <style>
+|     body {
+|     margin: 0;
+|     font-family: "RedHatDisplay", "Open Sans", Helvetica, Arial, sans-serif;
+|     font-size: 12px;
+|     line-height: 1.66666667;
+|     color: #333333;
+|     background-color: #f5f5f5;
+|     border: 0;
+|     vertical-align: middle;
+|     font-weight: 300;
+|_    margin: 0 0 10p
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9090-TCP:V=7.94SVN%T=SSL%I=7%D=12/27%Time=676EBA33%P=x86_64-pc-linu
+SF:x-gnu%r(GetRequest,E70,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-T
+SF:ype:\x20text/html;\x20charset=utf8\r\nTransfer-Encoding:\x20chunked\r\n
+SF:X-DNS-Prefetch-Control:\x20off\r\nReferrer-Policy:\x20no-referrer\r\nX-
+SF:Content-Type-Options:\x20nosniff\r\nCross-Origin-Resource-Policy:\x20sa
+SF:me-origin\r\n\r\n29\r\n<!DOCTYPE\x20html>\n<html>\n<head>\n\x20\x20\x20
+SF:\x20<title>\r\nb\r\nBad\x20request\r\nd08\r\n</title>\n\x20\x20\x20\x20
+SF:<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset
+SF:=utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"widt
+SF:h=device-width,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<style>\n\tbo
+SF:dy\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\"RedH
+SF:atDisplay\",\x20\"Open\x20Sans\",\x20Helvetica,\x20Arial,\x20sans-serif
+SF:;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x201\.666
+SF:66667;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#3333
+SF:33;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\
+SF:x20#f5f5f5;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20img\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bord
+SF:er:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20vertical-ali
+SF:gn:\x20middle;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20fo
+SF:nt-weight:\x20300;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20p\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0margin:\x200\x200\x2010p")%r(HTTPOptions,E70,"HTTP/1\.1\x20400\x20Bad\
+SF:x20request\r\nContent-Type:\x20text/html;\x20charset=utf8\r\nTransfer-E
+SF:ncoding:\x20chunked\r\nX-DNS-Prefetch-Control:\x20off\r\nReferrer-Polic
+SF:y:\x20no-referrer\r\nX-Content-Type-Options:\x20nosniff\r\nCross-Origin
+SF:-Resource-Policy:\x20same-origin\r\n\r\n29\r\n<!DOCTYPE\x20html>\n<html
+SF:>\n<head>\n\x20\x20\x20\x20<title>\r\nb\r\nBad\x20request\r\nd08\r\n</t
+SF:itle>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=
+SF:\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewp
+SF:ort\"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x20\x
+SF:20\x20\x20<style>\n\tbody\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0font-family:\x20\"RedHatDisplay\",\x20\"Open\x20Sans\",\x20Helvetica,\
+SF:x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20font-size:\x2012px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0line-height:\x201\.66666667;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20color:\x20#333333;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20background-color:\x20#f5f5f5;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20img\x20{\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20border:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20vertical-align:\x20middle;\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:}\n\x20\x20\x20\x20\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20font-weight:\x20300;\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20p\x20{\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20margin:\x200\x200\x2010p");
+MAC Address: 08:00:27:51:E5:59 (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 27 15:33:10 2024 -- 1 IP address (1 host up) scanned in 177.75 seconds

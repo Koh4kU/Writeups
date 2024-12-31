@@ -1,0 +1,294 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbuster.txt
+START_TIME: Thu Dec 26 00:31:47 2024
+URL_BASE: http://192.168.1.68/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://192.168.1.68/ ----
++ http://192.168.1.68/index.html (CODE:200|SIZE:10701)
++ http://192.168.1.68/server-status (CODE:403|SIZE:277)
+==> DIRECTORY: http://192.168.1.68/wordpress/
+
+---- Entering directory: http://192.168.1.68/wordpress/ ----
++ http://192.168.1.68/wordpress/index.php (CODE:301|SIZE:0)
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/
++ http://192.168.1.68/wordpress/xmlrpc.php (CODE:405|SIZE:42)
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/ ----
++ http://192.168.1.68/wordpress/wp-admin/admin.php (CODE:302|SIZE:0)
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/css/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/images/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/includes/
++ http://192.168.1.68/wordpress/wp-admin/index.php (CODE:302|SIZE:0)
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/js/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/maint/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/network/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/user/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/ ----
++ http://192.168.1.68/wordpress/wp-content/index.php (CODE:200|SIZE:0)
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/languages/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/plugins/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/themes/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/upgrade/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/uploads/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/assets/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/certificates/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/css/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/customize/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/fonts/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/images/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/sitemaps/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/widgets/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/css/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/images/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/includes/ ----
++ http://192.168.1.68/wordpress/wp-admin/includes/admin.php (CODE:500|SIZE:0)
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/js/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-admin/js/widgets/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/maint/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/network/ ----
++ http://192.168.1.68/wordpress/wp-admin/network/admin.php (CODE:302|SIZE:0)
++ http://192.168.1.68/wordpress/wp-admin/network/index.php (CODE:302|SIZE:0)
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/user/ ----
++ http://192.168.1.68/wordpress/wp-admin/user/admin.php (CODE:302|SIZE:0)
++ http://192.168.1.68/wordpress/wp-admin/user/index.php (CODE:302|SIZE:0)
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/languages/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/languages/plugins/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-content/languages/themes/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/plugins/ ----
++ http://192.168.1.68/wordpress/wp-content/plugins/index.php (CODE:200|SIZE:0)
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/themes/ ----
++ http://192.168.1.68/wordpress/wp-content/themes/index.php (CODE:200|SIZE:0)
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/upgrade/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/uploads/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/assets/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/archives/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/audio/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/avatar/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/block/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/button/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/buttons/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/calendar/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/categories/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/code/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/columns/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/comments/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/cover/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/details/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/embed/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/file/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/gallery/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/group/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/html/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/image/
++ http://192.168.1.68/wordpress/wp-includes/blocks/index.php (CODE:500|SIZE:0)
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/list/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/missing/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/more/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/navigation/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/query/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/quote/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/rss/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/search/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/spacer/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/table/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/blocks/video/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/certificates/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/css/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/css/dist/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/customize/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/fonts/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/images/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/images/media/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/images/smilies/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/dist/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/jquery/
++ http://192.168.1.68/wordpress/wp-includes/js/swfobject.js (CODE:200|SIZE:10231)
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/thickbox/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/sitemaps/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/sitemaps/providers/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/widgets/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-admin/js/widgets/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/languages/plugins/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-content/languages/themes/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/archives/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/audio/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/avatar/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/block/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/button/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/buttons/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/calendar/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/categories/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/code/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/columns/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/comments/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/cover/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/details/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/embed/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/file/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/gallery/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/group/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/html/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/image/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/list/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/missing/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/more/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/navigation/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/query/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/quote/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/rss/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/search/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/spacer/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/table/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/blocks/video/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/css/dist/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/css/dist/components/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/css/dist/editor/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/css/dist/widgets/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/images/media/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/images/smilies/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/dist/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/dist/development/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/dist/vendor/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/jquery/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/jquery/ui/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/thickbox/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/langs/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/skins/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/themes/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/utils/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/sitemaps/providers/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/css/dist/components/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/css/dist/editor/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/css/dist/widgets/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/dist/development/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/dist/vendor/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/jquery/ui/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/langs/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/hr/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/image/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/link/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/lists/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/media/
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/wordpress/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/skins/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/skins/wordpress/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/themes/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/utils/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/hr/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/image/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/link/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/lists/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/media/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/plugins/wordpress/ ----
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/skins/wordpress/ ----
+==> DIRECTORY: http://192.168.1.68/wordpress/wp-includes/js/tinymce/skins/wordpress/images/
+
+---- Entering directory: http://192.168.1.68/wordpress/wp-includes/js/tinymce/skins/wordpress/images/ ----
+
+-----------------
+END_TIME: Thu Dec 26 00:37:44 2024
+DOWNLOADED: 401244 - FOUND: 16

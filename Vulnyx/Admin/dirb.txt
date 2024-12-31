@@ -1,0 +1,21 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb.txt
+START_TIME: Mon Dec 30 06:12:20 2024
+URL_BASE: http://192.168.1.58/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://192.168.1.58/ ----
+
+-----------------
+END_TIME: Mon Dec 30 06:12:43 2024
+DOWNLOADED: 20458 - FOUND: 0

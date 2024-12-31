@@ -1,0 +1,20 @@
+# Nmap 7.94SVN scan initiated Mon Dec 30 06:03:03 2024 as: /usr/lib/nmap/nmap --privileged -p- --open -sS --min-rate 5000 -n -Pn -vv -oN firstNmap.txt 192.168.1.58
+Nmap scan report for 192.168.1.58
+Host is up, received arp-response (0.0021s latency).
+Scanned at 2024-12-30 06:03:04 EST for 47s
+Not shown: 33073 filtered tcp ports (no-response), 32453 closed tcp ports (reset)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE      REASON
+80/tcp    open  http         syn-ack ttl 128
+135/tcp   open  msrpc        syn-ack ttl 128
+139/tcp   open  netbios-ssn  syn-ack ttl 128
+445/tcp   open  microsoft-ds syn-ack ttl 128
+49665/tcp open  unknown      syn-ack ttl 128
+49666/tcp open  unknown      syn-ack ttl 128
+49667/tcp open  unknown      syn-ack ttl 128
+49669/tcp open  unknown      syn-ack ttl 128
+49670/tcp open  unknown      syn-ack ttl 128
+MAC Address: 08:00:27:72:8D:13 (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/share/nmap
+# Nmap done at Mon Dec 30 06:03:51 2024 -- 1 IP address (1 host up) scanned in 47.45 seconds

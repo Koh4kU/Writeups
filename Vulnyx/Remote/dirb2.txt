@@ -1,0 +1,294 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb2.txt
+START_TIME: Thu Dec 26 17:42:55 2024
+URL_BASE: http://remote.nyx/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://remote.nyx/ ----
++ http://remote.nyx/index.html (CODE:200|SIZE:10701)
++ http://remote.nyx/server-status (CODE:403|SIZE:275)
+==> DIRECTORY: http://remote.nyx/wordpress/
+
+---- Entering directory: http://remote.nyx/wordpress/ ----
++ http://remote.nyx/wordpress/index.php (CODE:301|SIZE:0)
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/
++ http://remote.nyx/wordpress/xmlrpc.php (CODE:405|SIZE:42)
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/ ----
++ http://remote.nyx/wordpress/wp-admin/admin.php (CODE:302|SIZE:0)
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/css/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/images/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/includes/
++ http://remote.nyx/wordpress/wp-admin/index.php (CODE:302|SIZE:0)
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/js/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/maint/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/network/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/user/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/ ----
++ http://remote.nyx/wordpress/wp-content/index.php (CODE:200|SIZE:0)
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/languages/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/plugins/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/themes/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/upgrade/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/uploads/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/assets/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/certificates/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/css/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/customize/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/fonts/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/images/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/sitemaps/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/widgets/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/css/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/images/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/includes/ ----
++ http://remote.nyx/wordpress/wp-admin/includes/admin.php (CODE:500|SIZE:0)
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/js/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-admin/js/widgets/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/maint/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/network/ ----
++ http://remote.nyx/wordpress/wp-admin/network/admin.php (CODE:302|SIZE:0)
++ http://remote.nyx/wordpress/wp-admin/network/index.php (CODE:302|SIZE:0)
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/user/ ----
++ http://remote.nyx/wordpress/wp-admin/user/admin.php (CODE:302|SIZE:0)
++ http://remote.nyx/wordpress/wp-admin/user/index.php (CODE:302|SIZE:0)
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/languages/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/languages/plugins/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-content/languages/themes/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/plugins/ ----
++ http://remote.nyx/wordpress/wp-content/plugins/index.php (CODE:200|SIZE:0)
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/themes/ ----
++ http://remote.nyx/wordpress/wp-content/themes/index.php (CODE:200|SIZE:0)
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/upgrade/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/uploads/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/assets/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/archives/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/audio/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/avatar/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/block/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/button/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/buttons/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/calendar/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/categories/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/code/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/columns/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/comments/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/cover/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/details/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/embed/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/file/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/gallery/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/group/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/html/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/image/
++ http://remote.nyx/wordpress/wp-includes/blocks/index.php (CODE:500|SIZE:0)
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/list/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/missing/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/more/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/navigation/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/query/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/quote/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/rss/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/search/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/spacer/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/table/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/blocks/video/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/certificates/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/css/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/css/dist/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/customize/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/fonts/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/images/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/images/media/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/images/smilies/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/dist/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/jquery/
++ http://remote.nyx/wordpress/wp-includes/js/swfobject.js (CODE:200|SIZE:10231)
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/thickbox/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/sitemaps/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/sitemaps/providers/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/widgets/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-admin/js/widgets/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/languages/plugins/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-content/languages/themes/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/archives/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/audio/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/avatar/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/block/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/button/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/buttons/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/calendar/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/categories/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/code/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/columns/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/comments/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/cover/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/details/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/embed/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/file/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/gallery/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/group/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/html/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/image/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/list/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/missing/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/more/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/navigation/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/query/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/quote/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/rss/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/search/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/spacer/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/table/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/blocks/video/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/css/dist/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/css/dist/components/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/css/dist/editor/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/css/dist/widgets/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/images/media/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/images/smilies/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/dist/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/dist/development/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/dist/vendor/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/jquery/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/jquery/ui/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/thickbox/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/langs/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/skins/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/themes/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/utils/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/sitemaps/providers/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/css/dist/components/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/css/dist/editor/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/css/dist/widgets/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/dist/development/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/dist/vendor/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/jquery/ui/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/langs/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/hr/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/image/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/link/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/lists/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/media/
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/wordpress/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/skins/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/skins/wordpress/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/themes/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/utils/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/hr/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/image/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/link/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/lists/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/media/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/plugins/wordpress/ ----
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/skins/wordpress/ ----
+==> DIRECTORY: http://remote.nyx/wordpress/wp-includes/js/tinymce/skins/wordpress/images/
+
+---- Entering directory: http://remote.nyx/wordpress/wp-includes/js/tinymce/skins/wordpress/images/ ----
+
+-----------------
+END_TIME: Thu Dec 26 17:49:03 2024
+DOWNLOADED: 401244 - FOUND: 16
