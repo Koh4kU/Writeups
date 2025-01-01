@@ -1,0 +1,23 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb3.txt
+START_TIME: Wed Jan  1 07:24:58 2025
+URL_BASE: http://yourwaf.nyx:3000/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://yourwaf.nyx:3000/ ----
++ http://yourwaf.nyx:3000/Logs (CODE:200|SIZE:1027809)
++ http://yourwaf.nyx:3000/logs (CODE:200|SIZE:1027809)
+
+-----------------
+END_TIME: Wed Jan  1 07:25:20 2025
+DOWNLOADED: 20458 - FOUND: 2

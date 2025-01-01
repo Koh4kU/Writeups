@@ -1,0 +1,54 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb2.txt
+START_TIME: Wed Jan  1 07:19:29 2025
+URL_BASE: http://yourwaf.nyx/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://yourwaf.nyx/ ----
++ http://yourwaf.nyx/Thumbs.db (CODE:403|SIZE:276)
++ http://yourwaf.nyx/cgi-bin/ (CODE:403|SIZE:276)
+==> DIRECTORY: http://yourwaf.nyx/javascript/
++ http://yourwaf.nyx/server-info (CODE:403|SIZE:276)
++ http://yourwaf.nyx/server-status (CODE:403|SIZE:276)
++ http://yourwaf.nyx/~bin (CODE:403|SIZE:276)
++ http://yourwaf.nyx/~lp (CODE:403|SIZE:276)
++ http://yourwaf.nyx/~mail (CODE:403|SIZE:276)
++ http://yourwaf.nyx/~nobody (CODE:403|SIZE:276)
++ http://yourwaf.nyx/~sys (CODE:403|SIZE:276)
+
+---- Entering directory: http://yourwaf.nyx/javascript/ ----
++ http://yourwaf.nyx/javascript/Thumbs.db (CODE:403|SIZE:276)
+==> DIRECTORY: http://yourwaf.nyx/javascript/async/
+==> DIRECTORY: http://yourwaf.nyx/javascript/events/
+==> DIRECTORY: http://yourwaf.nyx/javascript/util/
+
+---- Entering directory: http://yourwaf.nyx/javascript/async/ ----
++ http://yourwaf.nyx/javascript/async/Thumbs.db (CODE:403|SIZE:276)
++ http://yourwaf.nyx/javascript/async/async (CODE:200|SIZE:32659)
+
+---- Entering directory: http://yourwaf.nyx/javascript/events/ ----
++ http://yourwaf.nyx/javascript/events/Thumbs.db (CODE:403|SIZE:276)
++ http://yourwaf.nyx/javascript/events/events (CODE:200|SIZE:14890)
+
+---- Entering directory: http://yourwaf.nyx/javascript/util/ ----
++ http://yourwaf.nyx/javascript/util/Thumbs.db (CODE:403|SIZE:276)
+==> DIRECTORY: http://yourwaf.nyx/javascript/util/support/
++ http://yourwaf.nyx/javascript/util/util (CODE:200|SIZE:19697)
+
+---- Entering directory: http://yourwaf.nyx/javascript/util/support/ ----
++ http://yourwaf.nyx/javascript/util/support/Thumbs.db (CODE:403|SIZE:276)
++ http://yourwaf.nyx/javascript/util/support/types (CODE:200|SIZE:8672)
+
+-----------------
+END_TIME: Wed Jan  1 07:24:08 2025
+DOWNLOADED: 122748 - FOUND: 18

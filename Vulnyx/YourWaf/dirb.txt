@@ -1,0 +1,79 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb.txt
+START_TIME: Wed Jan  1 07:01:35 2025
+URL_BASE: http://www.yourwaf.nyx/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://www.yourwaf.nyx/ ----
++ http://www.yourwaf.nyx/Thumbs.db (CODE:403|SIZE:280)
+==> DIRECTORY: http://www.yourwaf.nyx/assets/
++ http://www.yourwaf.nyx/cgi-bin/ (CODE:403|SIZE:280)
+==> DIRECTORY: http://www.yourwaf.nyx/css/
+==> DIRECTORY: http://www.yourwaf.nyx/javascript/
+==> DIRECTORY: http://www.yourwaf.nyx/js/
++ http://www.yourwaf.nyx/server-info (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/server-status (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/~bin (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/~lp (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/~mail (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/~nobody (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/~sys (CODE:403|SIZE:280)
+
+---- Entering directory: http://www.yourwaf.nyx/assets/ ----
++ http://www.yourwaf.nyx/assets/Thumbs.db (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/assets/favicon.ico (CODE:200|SIZE:23462)
+==> DIRECTORY: http://www.yourwaf.nyx/assets/img/
+
+---- Entering directory: http://www.yourwaf.nyx/css/ ----
++ http://www.yourwaf.nyx/css/Thumbs.db (CODE:403|SIZE:280)
+
+---- Entering directory: http://www.yourwaf.nyx/javascript/ ----
++ http://www.yourwaf.nyx/javascript/Thumbs.db (CODE:403|SIZE:280)
+==> DIRECTORY: http://www.yourwaf.nyx/javascript/async/
+==> DIRECTORY: http://www.yourwaf.nyx/javascript/events/
+==> DIRECTORY: http://www.yourwaf.nyx/javascript/util/
+
+---- Entering directory: http://www.yourwaf.nyx/js/ ----
++ http://www.yourwaf.nyx/js/Thumbs.db (CODE:403|SIZE:280)
+
+---- Entering directory: http://www.yourwaf.nyx/assets/img/ ----
++ http://www.yourwaf.nyx/assets/img/Thumbs.db (CODE:403|SIZE:280)
+==> DIRECTORY: http://www.yourwaf.nyx/assets/img/portfolio/
+
+---- Entering directory: http://www.yourwaf.nyx/javascript/async/ ----
++ http://www.yourwaf.nyx/javascript/async/Thumbs.db (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/javascript/async/async (CODE:200|SIZE:32659)
+
+---- Entering directory: http://www.yourwaf.nyx/javascript/events/ ----
++ http://www.yourwaf.nyx/javascript/events/Thumbs.db (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/javascript/events/events (CODE:200|SIZE:14890)
+
+---- Entering directory: http://www.yourwaf.nyx/javascript/util/ ----
++ http://www.yourwaf.nyx/javascript/util/Thumbs.db (CODE:403|SIZE:280)
+==> DIRECTORY: http://www.yourwaf.nyx/javascript/util/support/
++ http://www.yourwaf.nyx/javascript/util/util (CODE:200|SIZE:19697)
+
+---- Entering directory: http://www.yourwaf.nyx/assets/img/portfolio/ ----
++ http://www.yourwaf.nyx/assets/img/portfolio/Thumbs.db (CODE:403|SIZE:280)
+==> DIRECTORY: http://www.yourwaf.nyx/assets/img/portfolio/thumbnails/
+
+---- Entering directory: http://www.yourwaf.nyx/javascript/util/support/ ----
++ http://www.yourwaf.nyx/javascript/util/support/Thumbs.db (CODE:403|SIZE:280)
++ http://www.yourwaf.nyx/javascript/util/support/types (CODE:200|SIZE:8672)
+
+---- Entering directory: http://www.yourwaf.nyx/assets/img/portfolio/thumbnails/ ----
++ http://www.yourwaf.nyx/assets/img/portfolio/thumbnails/Thumbs.db (CODE:403|SIZE:280)
+
+-----------------
+END_TIME: Wed Jan  1 07:10:38 2025
+DOWNLOADED: 245496 - FOUND: 25

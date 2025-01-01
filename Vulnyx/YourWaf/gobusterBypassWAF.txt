@@ -1,0 +1,2 @@
+[32mFound[0m: www.yourwaf.nyx [32mStatus: 200[0m [Size: 10722]
+[32mFound[0m: maintenance.yourwaf.nyx [32mStatus: 200[0m [Size: 292]
