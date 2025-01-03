@@ -1,0 +1,20 @@
+# Nmap 7.94SVN scan initiated Fri Jan  3 12:23:07 2025 as: /usr/lib/nmap/nmap --privileged -p- --open --min-rate 5000 -sS -n -Pn -oN firstNmap.txt 192.168.1.74
+Nmap scan report for 192.168.1.74
+Host is up (0.00059s latency).
+Not shown: 64333 closed tcp ports (reset), 1191 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+8080/tcp  open  http-proxy
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  unknown
+49668/tcp open  unknown
+49669/tcp open  unknown
+49670/tcp open  unknown
+MAC Address: 08:00:27:9F:9D:F5 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Fri Jan  3 12:23:41 2025 -- 1 IP address (1 host up) scanned in 34.40 seconds
