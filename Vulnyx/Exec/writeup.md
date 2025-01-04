@@ -1,5 +1,7 @@
 
-### WRITEUP - VULNYX - EXEC ##
+# WRITEUP - VULNYX - EXEC #
+
+<img src="https://github.com/AlexGis99/Writeups/assets/82893511/9f39b168-eac6-4ff7-aad2-9261ce4020a8">
 
 ## Scanning Network ##
 ```shell
