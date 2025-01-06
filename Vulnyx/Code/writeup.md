@@ -2,7 +2,7 @@
 
 <img src="https://github.com/user-attachments/assets/f4c31131-c4b4-42a7-ac42-613559503b7d">
 
-
+<!--
 ## Scanning network
 
 Escaneamos la red para encontrar la ip a atacar y la encontramos -> 192.168.1.56
