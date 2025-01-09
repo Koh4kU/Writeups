@@ -1,7 +1,7 @@
 # WRITEUP - HOOK - VULNYX
 
 ![image](https://github.com/user-attachments/assets/9d529618-311b-4268-84d3-8ef762a1b5ca)
-
+<!--
 ## Scanning Network
 
 Escaneamos la red para identificar la IP del equipo a vulnerar:
@@ -106,3 +106,4 @@ Sabiendo esto, podemos movernos y obtener la flag de root de forma sencilla.
 
 ## BONUS
 Podemos mantener una persistencia, para no tener que repetir el proceso en caso de volver a conectarse con el usuario, y sin cambiarle la contraseña ni nada, la forma es crear un par clave con ssh-keygen para así, poder conectarnos mediante la clave privada al sistema, las veces que queramos. Creamos las claves con ssh-keygen, y una vez finaliza, copiamos id_rsa (clave privada) la cual será la que usaremos para realizar las conexiones remotas. Por el otro lado, la clave pública será copiada dentro del archivo de la máquina víctima ~/.ssh/authorized_keys.
+-->
