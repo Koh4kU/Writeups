@@ -1,12 +1,12 @@
 # Writeup - ADMIN - VULNYX #
 
 ![image](https://github.com/user-attachments/assets/2f01f603-331f-49e7-a0e6-bbf14fb770a9)
-<!--
+
 ### Recon/Scanning network ###
 
 Realizamos un escaneo de la red para identificar las posibles ips
 ```shell
-Netdiscover -> 192.168.1.58
+sudo netdiscover -r 192.168.1.0/24
 ```
 
 Encontramos una ip con la que poder empezar a escanear por puertos abiertos -> 192.168.1.58
@@ -27,7 +27,7 @@ PORT      STATE SERVICE      REASON
 49669/tcp open  unknown      syn-ack ttl 128                                                 
 49670/tcp open  unknown      syn-ack ttl 128
 ```
-Realizamos un segundo escanéo ahora más focalizado en los puertos recogidos en el que analizaremos los posibles servicios que se hospedan en cada uno de los puertos:
+Realizamos un segundo escaneo ahora más focalizado en los puertos recogidos en el que analizaremos los posibles servicios que se hospedan en cada uno de los puertos:
 ```shell
 nmap -p 80,135,139,445,49665,49666,49667,49669,49670 -sVC 192.168.1.58 -oN secondNmap.txt
 
@@ -70,7 +70,7 @@ Vemos que existe un archivo "/tasks.txt" por lo que lo revisamos y encontramos a
 
 ### Exploitation ###
 
-Tenemos un posible usuario "hope". Ahora intentaremos enumerar o acceder mediante SMB con dicho usuario sin credenciales pero no conseguimos enumerar ni usuarios ni shares, solo conseguimos el domain (admin). Con el usuario por defecto de SMB, "guest" tampoco es posible realizar nada sin credenciales. El único paso a seguir es realizar un ataque de fuerza bruta sobre dicho usuario en SMB (rezamos por que no se bloquee el usuario).
+Tenemos un posible usuario "hope". Ahora intentaremos enumerar o acceder mediante SMB con dicho usuario sin credenciales pero no conseguimos enumerar ni usuarios ni shares, solo conseguimos el domain (admin). Con el usuario por defecto de SMB, "guest" tampoco es posible realizar nada sin credenciales. El único paso a seguir es realizar un ataque de fuerza bruta sobre dicho usuario en SMB (rezamos porque no se bloquee el usuario).
 ```shell
 nxc smb 192.168.1.58 -u "hope" -p /usr/share/wordlists/rockyou.txt --ignore-pw-decoding
 ```
@@ -159,4 +159,3 @@ Al ser multiproceso, hay que tener en cuenta las condiciones de carrera que se p
 ### Importante
 
 Añadir que hay que tener cuidado en este tipo de acciones (fuerza bruta) ya que con la ejecución de mis scripts, bloquee varias veces al usuario, teniendo que reestablecer la máquina.
--->
