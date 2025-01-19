@@ -1,0 +1,35 @@
+# Nmap 7.94SVN scan initiated Wed Jan 15 13:34:13 2025 as: /usr/lib/nmap/nmap --privileged -p- --open --min-rate 2000 -n -Pn -sS -oN firstNmap.txt 192.168.1.50
+Nmap scan report for 192.168.1.50
+Host is up (0.00054s latency).
+Not shown: 65245 closed tcp ports (reset), 264 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE
+53/tcp    open  domain
+88/tcp    open  kerberos-sec
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+389/tcp   open  ldap
+445/tcp   open  microsoft-ds
+464/tcp   open  kpasswd5
+593/tcp   open  http-rpc-epmap
+636/tcp   open  ldapssl
+3268/tcp  open  globalcatLDAP
+3269/tcp  open  globalcatLDAPssl
+5985/tcp  open  wsman
+9389/tcp  open  adws
+47001/tcp open  winrm
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  unknown
+49671/tcp open  unknown
+49674/tcp open  unknown
+49675/tcp open  unknown
+49678/tcp open  unknown
+49679/tcp open  unknown
+49684/tcp open  unknown
+49693/tcp open  unknown
+49708/tcp open  unknown
+MAC Address: 08:00:27:BC:37:0C (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Jan 15 13:34:29 2025 -- 1 IP address (1 host up) scanned in 15.76 seconds

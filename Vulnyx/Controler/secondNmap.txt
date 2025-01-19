@@ -1,0 +1,69 @@
+# Nmap 7.94SVN scan initiated Wed Jan 15 13:41:56 2025 as: /usr/lib/nmap/nmap --privileged -p 53,88,135,139,389,445,464,593,636,3268,3269,5985,9389,47001,49664,49665,49666,49667,49671,49674,49675,49678,49679,49684,49693,49708 -sVC -vv -oN secondNmap.txt 192.168.1.50
+Nmap scan report for 192.168.1.50
+Host is up, received arp-response (0.0015s latency).
+Scanned at 2025-01-15 13:41:57 EST for 69s
+
+PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 128 Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack ttl 128 Microsoft Windows Kerberos (server time: 2025-01-16 02:42:02Z)
+135/tcp   open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 128 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 128 Microsoft Windows Active Directory LDAP (Domain: control.nyx0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 128
+464/tcp   open  kpasswd5?     syn-ack ttl 128
+593/tcp   open  ncacn_http    syn-ack ttl 128 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack ttl 128
+3268/tcp  open  ldap          syn-ack ttl 128 Microsoft Windows Active Directory LDAP (Domain: control.nyx0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack ttl 128
+5985/tcp  open  http          syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf        syn-ack ttl 128 .NET Message Framing
+47001/tcp open  http          syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49671/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49674/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49675/tcp open  ncacn_http    syn-ack ttl 128 Microsoft Windows RPC over HTTP 1.0
+49678/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49679/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49684/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49693/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49708/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+MAC Address: 08:00:27:BC:37:0C (Oracle VirtualBox virtual NIC)
+Service Info: Host: CONTROLER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 14669/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 45963/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 31101/udp): CLEAN (Timeout)
+|   Check 4 (port 37900/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-time: 
+|   date: 2025-01-16T02:42:57
+|_  start_date: N/A
+|_clock-skew: 7h59m59s
+| nbstat: NetBIOS name: CONTROLER, NetBIOS user: <unknown>, NetBIOS MAC: 08:00:27:bc:37:0c (Oracle VirtualBox virtual NIC)
+| Names:
+|   CONTROLER<20>        Flags: <unique><active>
+|   CONTROLER<00>        Flags: <unique><active>
+|   CONTROL<00>          Flags: <group><active>
+|   CONTROL<1c>          Flags: <group><active>
+|   CONTROL<1b>          Flags: <unique><active>
+| Statistics:
+|   08:00:27:bc:37:0c:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+
+Read data files from: /usr/share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 15 13:43:06 2025 -- 1 IP address (1 host up) scanned in 69.38 seconds

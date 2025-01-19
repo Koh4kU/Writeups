@@ -1,0 +1,26 @@
+
+; <<>> DiG 9.20.4-3-Debian <<>> any @192.168.1.50 control.nyx
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54010
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; QUESTION SECTION:
+;control.nyx.			IN	ANY
+
+;; ANSWER SECTION:
+control.nyx.		600	IN	A	192.168.1.50
+control.nyx.		3600	IN	NS	controler.control.nyx.
+control.nyx.		3600	IN	SOA	controler.control.nyx. hostmaster.control.nyx. 21 900 600 86400 3600
+
+;; ADDITIONAL SECTION:
+controler.control.nyx.	3600	IN	A	192.168.1.50
+
+;; Query time: 0 msec
+;; SERVER: 192.168.1.50#53(192.168.1.50) (TCP)
+;; WHEN: Wed Jan 15 14:13:08 EST 2025
+;; MSG SIZE  rcvd: 143
+

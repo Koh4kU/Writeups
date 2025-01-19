@@ -1,0 +1,333 @@
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Jan 17 15:02:01 2025
+
+[34m =========================================( [0m[32mTarget Information[0m[34m )=========================================
+
+[0mTarget ........... 192.168.1.50
+RID Range ........ 500-550,1000-1050
+Username ......... 'b.lewis'
+Password ......... '101Music'
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[34m ============================( [0m[32mEnumerating Workgroup/Domain on 192.168.1.50[0m[34m )============================
+
+[0m[33m
+[+] [0m[32mGot domain/workgroup name: CONTROL
+
+[0m
+[34m ================================( [0m[32mNbtstat Information for 192.168.1.50[0m[34m )================================
+
+[0mLooking up status of 192.168.1.50
+	CONTROLER       <00> -         B <ACTIVE>  Workstation Service
+	CONTROL         <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	CONTROL         <1c> - <GROUP> B <ACTIVE>  Domain Controllers
+	CONTROL         <1b> -         B <ACTIVE>  Domain Master Browser
+	CONTROLER       <20> -         B <ACTIVE>  File Server Service
+
+	MAC Address = 08-00-27-BC-37-0C
+
+[34m ===================================( [0m[32mSession Check on 192.168.1.50[0m[34m )===================================
+
+[0m[33m
+[+] [0m[32mServer 192.168.1.50 allows sessions using username 'b.lewis', password '101Music'
+
+[0m
+[34m ================================( [0m[32mGetting domain SID for 192.168.1.50[0m[34m )================================
+
+[0mDomain Name: CONTROL
+Domain Sid: S-1-5-21-2142633474-2248127568-3584646925
+[33m
+[+] [0m[32mHost is part of a domain (not a workgroup)
+
+[0m
+[34m ===================================( [0m[32mOS information on 192.168.1.50[0m[34m )===================================
+
+[0m[33m
+[E] [0m[31mCan't get OS info with smbclient
+
+[0m[33m
+[+] [0m[32mGot OS info for 192.168.1.50 from srvinfo: 
+[0m	192.168.1.50   Wk Sv PDC Tim NT     
+	platform_id     :	500
+	os version      :	10.0
+	server type     :	0x80102b
+
+
+[34m =======================================( [0m[32mUsers on 192.168.1.50[0m[34m )=======================================
+
+[0mindex: 0xfb1 RID: 0x453 acb: 0x00000211 Account: a.hansen	Name: Axel Hansen	Desc: (Account Disabled)
+index: 0xeda RID: 0x1f4 acb: 0x00000210 Account: Administrator	Name: (null)	Desc: (Account Enabled)
+index: 0xfae RID: 0x450 acb: 0x00010210 Account: b.lewis	Name: Ben Lewis	Desc: (Account Enabled)
+index: 0xfb0 RID: 0x452 acb: 0x00000211 Account: d.petrov	Name: Dave Petrov	Desc: (Account Disabled)
+index: 0xedb RID: 0x1f5 acb: 0x00000215 Account: Guest	Name: (null)	Desc: (Account Disabled)
+index: 0xfac RID: 0x44f acb: 0x00000210 Account: j.levy	Name: John Levy	Desc: (Account Enabled)
+index: 0xf10 RID: 0x1f6 acb: 0x00020011 Account: krbtgt	Name: (null)	Desc: Key Distribution Center Service Account
+index: 0xfaf RID: 0x451 acb: 0x00000211 Account: m.klein	Name: Mike Klein	Desc: (Account Disabled)
+
+user:[Administrator] rid:[0x1f4]
+user:[Guest] rid:[0x1f5]
+user:[krbtgt] rid:[0x1f6]
+user:[j.levy] rid:[0x44f]
+user:[b.lewis] rid:[0x450]
+user:[m.klein] rid:[0x451]
+user:[d.petrov] rid:[0x452]
+user:[a.hansen] rid:[0x453]
+
+[34m =================================( [0m[32mShare Enumeration on 192.168.1.50[0m[34m )=================================
+
+[0mdo_connect: Connection to 192.168.1.50 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	ADMIN$          Disk      Remote Admin
+	C$              Disk      Default share
+	IPC$            IPC       Remote IPC
+	NETLOGON        Disk      Logon server share 
+	SYSVOL          Disk      Logon server share 
+Reconnecting with SMB1 for workgroup listing.
+Unable to connect with SMB1 -- no workgroup available
+[33m
+[+] [0m[32mAttempting to map shares on 192.168.1.50
+
+[0m//192.168.1.50/ADMIN$	[35mMapping: [0mDENIED[35m Listing: [0mN/A[35m Writing: [0mN/A
+//192.168.1.50/C$	[35mMapping: [0mDENIED[35m Listing: [0mN/A[35m Writing: [0mN/A
+[33m
+[E] [0m[31mCan't understand response:
+
+[0mNT_STATUS_NO_SUCH_FILE listing \*
+//192.168.1.50/IPC$	[35mMapping: [0mN/A[35m Listing: [0mN/A[35m Writing: [0mN/A
+//192.168.1.50/NETLOGON	[35mMapping: [0mOK[35m Listing: [0mOK[35m Writing: [0mN/A
+//192.168.1.50/SYSVOL	[35mMapping: [0mOK[35m Listing: [0mOK[35m Writing: [0mN/A
+
+[34m ============================( [0m[32mPassword Policy Information for 192.168.1.50[0m[34m )============================
+
+[0m
+
+[+] Attaching to 192.168.1.50 using b.lewis:101Music
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Cannot request session (Called Name:192.168.1.50)
+
+[+] Trying protocol 445/SMB...
+
+[+] Found domain(s):
+
+	[+] CONTROL
+	[+] Builtin
+
+[+] Password Info for Domain: CONTROL
+
+	[+] Minimum password length: 7
+	[+] Password history length: 24
+	[+] Maximum password age: 41 days 23 hours 53 minutes 
+	[+] Password Complexity Flags: 000001
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 1
+
+	[+] Minimum password age: 1 day 4 minutes 
+	[+] Reset Account Lockout Counter: 10 minutes 
+	[+] Locked Account Duration: 10 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
+
+
+[33m
+[+] [0m[32mRetieved partial password policy with rpcclient:
+
+
+[0mPassword Complexity: Enabled
+Minimum Password Length: 7
+
+
+[34m =======================================( [0m[32mGroups on 192.168.1.50[0m[34m )=======================================
+
+[0m[33m
+[+] [0m[32mGetting builtin groups:
+
+[0mgroup:[Server Operators] rid:[0x225]
+group:[Account Operators] rid:[0x224]
+group:[Pre-Windows 2000 Compatible Access] rid:[0x22a]
+group:[Incoming Forest Trust Builders] rid:[0x22d]
+group:[Windows Authorization Access Group] rid:[0x230]
+group:[Terminal Server License Servers] rid:[0x231]
+group:[Administrators] rid:[0x220]
+group:[Users] rid:[0x221]
+group:[Guests] rid:[0x222]
+group:[Print Operators] rid:[0x226]
+group:[Backup Operators] rid:[0x227]
+group:[Replicator] rid:[0x228]
+group:[Remote Desktop Users] rid:[0x22b]
+group:[Network Configuration Operators] rid:[0x22c]
+group:[Performance Monitor Users] rid:[0x22e]
+group:[Performance Log Users] rid:[0x22f]
+group:[Distributed COM Users] rid:[0x232]
+group:[IIS_IUSRS] rid:[0x238]
+group:[Cryptographic Operators] rid:[0x239]
+group:[Event Log Readers] rid:[0x23d]
+group:[Certificate Service DCOM Access] rid:[0x23e]
+group:[RDS Remote Access Servers] rid:[0x23f]
+group:[RDS Endpoint Servers] rid:[0x240]
+group:[RDS Management Servers] rid:[0x241]
+group:[Hyper-V Administrators] rid:[0x242]
+group:[Access Control Assistance Operators] rid:[0x243]
+group:[Remote Management Users] rid:[0x244]
+group:[Storage Replica Administrators] rid:[0x246]
+[33m
+[+] [0m[32m Getting builtin group memberships:
+
+[0m[35mGroup: [0mAdministrators' (RID: 544) has member: CONTROL\Administrator
+[35mGroup: [0mAdministrators' (RID: 544) has member: CONTROL\Enterprise Admins
+[35mGroup: [0mAdministrators' (RID: 544) has member: CONTROL\Domain Admins
+[35mGroup: [0mPre-Windows 2000 Compatible Access' (RID: 554) has member: NT AUTHORITY\Authenticated Users
+[35mGroup: [0mWindows Authorization Access Group' (RID: 560) has member: NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS
+[35mGroup: [0mRemote Management Users' (RID: 580) has member: CONTROL\j.levy
+[35mGroup: [0mUsers' (RID: 545) has member: NT AUTHORITY\INTERACTIVE
+[35mGroup: [0mUsers' (RID: 545) has member: NT AUTHORITY\Authenticated Users
+[35mGroup: [0mUsers' (RID: 545) has member: CONTROL\Domain Users
+[35mGroup: [0mGuests' (RID: 546) has member: CONTROL\Guest
+[35mGroup: [0mGuests' (RID: 546) has member: CONTROL\Domain Guests
+[35mGroup: [0mIIS_IUSRS' (RID: 568) has member: NT AUTHORITY\IUSR
+[33m
+[+] [0m[32m Getting local groups:
+
+[0mgroup:[Cert Publishers] rid:[0x205]
+group:[RAS and IAS Servers] rid:[0x229]
+group:[Allowed RODC Password Replication Group] rid:[0x23b]
+group:[Denied RODC Password Replication Group] rid:[0x23c]
+group:[DnsAdmins] rid:[0x44d]
+[33m
+[+] [0m[32m Getting local group memberships:
+
+[0m[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\krbtgt
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Domain Controllers
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Schema Admins
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Enterprise Admins
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Cert Publishers
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Domain Admins
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Group Policy Creator Owners
+[35mGroup: [0mDenied RODC Password Replication Group' (RID: 572) has member: CONTROL\Read-only Domain Controllers
+[33m
+[+] [0m[32m Getting domain groups:
+
+[0mgroup:[Enterprise Read-only Domain Controllers] rid:[0x1f2]
+group:[Domain Admins] rid:[0x200]
+group:[Domain Users] rid:[0x201]
+group:[Domain Guests] rid:[0x202]
+group:[Domain Computers] rid:[0x203]
+group:[Domain Controllers] rid:[0x204]
+group:[Schema Admins] rid:[0x206]
+group:[Enterprise Admins] rid:[0x207]
+group:[Group Policy Creator Owners] rid:[0x208]
+group:[Read-only Domain Controllers] rid:[0x209]
+group:[Cloneable Domain Controllers] rid:[0x20a]
+group:[Protected Users] rid:[0x20d]
+group:[Key Admins] rid:[0x20e]
+group:[Enterprise Key Admins] rid:[0x20f]
+group:[DnsUpdateProxy] rid:[0x44e]
+[33m
+[+] [0m[32m Getting domain group memberships:
+
+[0m[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\Administrator
+[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\krbtgt
+[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\j.levy
+[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\b.lewis
+[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\m.klein
+[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\d.petrov
+[35mGroup: [0m'Domain Users' (RID: 513) has member: CONTROL\a.hansen
+[35mGroup: [0m'Domain Guests' (RID: 514) has member: CONTROL\Guest
+[35mGroup: [0m'Domain Controllers' (RID: 516) has member: CONTROL\CONTROLER$
+[35mGroup: [0m'Group Policy Creator Owners' (RID: 520) has member: CONTROL\Administrator
+[35mGroup: [0m'Schema Admins' (RID: 518) has member: CONTROL\Administrator
+[35mGroup: [0m'Enterprise Admins' (RID: 519) has member: CONTROL\Administrator
+[35mGroup: [0m'Domain Admins' (RID: 512) has member: CONTROL\Administrator
+
+[34m ==================( [0m[32mUsers on 192.168.1.50 via RID cycling (RIDS: 500-550,1000-1050)[0m[34m )==================
+
+[0m[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-21-2142633474-2248127568-3584646925
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-21-2142633474-2248127568-3584646925
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-32
+[33m
+[+] [0m[32mEnumerating users using SID S-1-5-32 and logon username 'b.lewis', password '101Music'
+
+[0mS-1-5-32-544 BUILTIN\Administrators (Local Group)
+S-1-5-32-545 BUILTIN\Users (Local Group)
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+[33m
+[+] [0m[32mEnumerating users using SID S-1-5-80 and logon username 'b.lewis', password '101Music'
+
+[0m[33m
+[+] [0m[32mEnumerating users using SID S-1-5-21-4150329188-2689105034-2738912072 and logon username 'b.lewis', password '101Music'
+
+[0mS-1-5-21-4150329188-2689105034-2738912072-500 CONTROLER\Administrator (Local User)
+S-1-5-21-4150329188-2689105034-2738912072-501 CONTROLER\Guest (Local User)
+S-1-5-21-4150329188-2689105034-2738912072-503 CONTROLER\DefaultAccount (Local User)
+S-1-5-21-4150329188-2689105034-2738912072-504 CONTROLER\WDAGUtilityAccount (Local User)
+S-1-5-21-4150329188-2689105034-2738912072-513 CONTROLER\None (Domain Group)
+[33m
+[+] [0m[32mEnumerating users using SID S-1-5-90 and logon username 'b.lewis', password '101Music'
+
+[0m[33m
+[+] [0m[32mEnumerating users using SID S-1-5-21-2142633474-2248127568-3584646925 and logon username 'b.lewis', password '101Music'
+
+[0mS-1-5-21-2142633474-2248127568-3584646925-500 CONTROL\Administrator (Local User)
+S-1-5-21-2142633474-2248127568-3584646925-501 CONTROL\Guest (Local User)
+S-1-5-21-2142633474-2248127568-3584646925-502 CONTROL\krbtgt (Local User)
+S-1-5-21-2142633474-2248127568-3584646925-512 CONTROL\Domain Admins (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-513 CONTROL\Domain Users (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-514 CONTROL\Domain Guests (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-515 CONTROL\Domain Computers (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-516 CONTROL\Domain Controllers (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-517 CONTROL\Cert Publishers (Local Group)
+S-1-5-21-2142633474-2248127568-3584646925-518 CONTROL\Schema Admins (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-519 CONTROL\Enterprise Admins (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-520 CONTROL\Group Policy Creator Owners (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-521 CONTROL\Read-only Domain Controllers (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-522 CONTROL\Cloneable Domain Controllers (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-525 CONTROL\Protected Users (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-526 CONTROL\Key Admins (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-527 CONTROL\Enterprise Key Admins (Domain Group)
+S-1-5-21-2142633474-2248127568-3584646925-1000 CONTROL\CONTROLER$ (Local User)
+[33m
+[+] [0m[32mEnumerating users using SID S-1-5-80-3139157870-2983391045-3678747466-658725712 and logon username 'b.lewis', password '101Music'
+
+[0m
+[34m ===============================( [0m[32mGetting printer info for 192.168.1.50[0m[34m )===============================
+
+[0mNo printers returned.
+
+
+enum4linux complete on Fri Jan 17 15:02:45 2025
+
