@@ -1,7 +1,7 @@
 # WRITEUP - FIRE - VULNYX
 
 ![image](https://github.com/user-attachments/assets/4047d399-d6a3-40e4-9bb0-4375b62bc43e)
-<!--
+
 ## Scanning Network
 Realizamos un reconocimiento de la red para determinar la IP objetivo.
 ```shell
@@ -74,7 +74,7 @@ Se nos creará un directorio mozilla en el que se habrán descomprimido los arch
 
 <img src=https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Fire/Content/key4_dump.png>
 
-Si conocemos un poco cómo está gestionado firefox desde linux, encontraremos el arbol de directorios y arhcivos muy parecido a lo que tiene nuestro propio firefox, entre eso y el nombre de la capeta principal "mozilla/firefox" podemos suponer que es un backup de todas las configuraciones del navegador mozilla firefox. Una vez que sabemos esto, es fácil asumir el siguiente paso, importar las contraseñas antiguas a nuestro propio navegador. Para esto con una simple búsqueda encuentras que los dos únicos archivos necesarios para esto son: key3.db (en nuestro caso key4.db) y el famoso logins.json. Si visualizamos nuestro almacén de contraseñas, veremos que está vacio (a no ser que tengáis contraseñas guardadas aquí, que después de ver este writeup, seguro que se os quitan las ganas de guardar contraseñas en el navegador).
+Si conocemos un poco cómo está gestionado firefox desde linux, encontraremos el arbol de directorios y archivos muy parecido a lo que tiene nuestro propio firefox, entre eso y el nombre de la capeta principal "mozilla/firefox" podemos suponer que es un backup de todas las configuraciones del navegador mozilla firefox. Una vez que sabemos esto, es fácil asumir el siguiente paso, importar las contraseñas antiguas a nuestro propio navegador. Para esto con una simple búsqueda encuentras que los dos únicos archivos necesarios para esto son: key3.db (en nuestro caso key4.db) y el famoso logins.json. Si visualizamos nuestro almacén de contraseñas, veremos que está vacio (a no ser que tengáis contraseñas guardadas aquí, que después de ver este writeup, seguro que se os quitan las ganas de guardar contraseñas en el navegador).
 
 Antes:
 <img src=https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Fire/Content/firefox_passwords_blank.png>
@@ -92,7 +92,7 @@ Voila! Tenemos acceso a la consola de management de cockpit.
 
 Una vez dentro, ojeamos un poco y vemos una pestaña llamada "Terminal", que nos abre una terminal interactiva dentro del sistema. Y obtenemos la flag de marco:
 
-<img src=https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Fire/Content/flag_user.txt>
+<img src=https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Fire/Content/flag_user.png>
 
 ## Privilege Escalation
 Ahora, intentaremos acceder a root para conseguir la última flag y así comprometer completamente el sistema.
@@ -114,4 +114,3 @@ Tenemos una shell como root y obtenemos su flag.
 <img src=https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Fire/Content/root_whoami.png>
 
 <img src=https://github.com/Koh4kU/Writeups/blob/main/Vulnyx/Fire/Content/flag_root.png>
--->
